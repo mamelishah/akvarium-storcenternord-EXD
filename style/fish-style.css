@@ -1,0 +1,181 @@
+/* Sortbåndet kirug */
+
+.fish {
+  position: absolute;
+  left: -15%;
+  top: 50%;
+  width: 20vw;
+  height: 20vh;
+  transform-origin: center center;
+  animation: swim 10s linear infinite;
+}
+
+.fish-body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.fish img {
+  transform: scaleX(-1);
+}
+
+.fish-tail {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 31%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: tail-swing 1s ease-in-out infinite;
+}
+
+.fish img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.game1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.long-lower-part-fin1 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 43%;
+  bottom: 15%;
+  transform: translate(-50%, -50%);
+  animation: lower-fin-swing 0.5s ease-in-out infinite;
+}
+
+.long-lower-part-fin2 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 40%;
+  bottom: 15%;
+  transform: translate(-50%, -50%);
+  animation: lower-fin-swing2 0.5s ease-in-out infinite;
+}
+
+
+.big-fin {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  bottom: 45%;
+  transform: translate(-50%, -50%);
+  animation: lower-fin-swing2 0.5s ease-in-out infinite;
+}
+
+
+.top-part {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  left: 46%;
+  bottom: 7%;
+  transform: translate(-50%, -50%)
+}
+
+
+.game1-container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   
+    border: none;
+    animation: vendespil-knap 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.game1-container img {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.game1-container p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 6%;
+    font-size: 2.2vh
+}
+
+@keyframes tail-swing {
+  0% { transform: translate(-50%, -50%) rotate(10deg); }
+  50% { transform: translate(-50%, -50%) rotate(-10deg); }
+  100% { transform: translate(-50%, -50%) rotate(10deg); }
+}
+
+@keyframes lower-fin-swing {
+  0% { transform: translate(-50%, -50%) rotate(5deg); }
+  50% { transform: translate(-50%, -50%) rotate(-5deg); }
+  100% { transform: translate(-50%, -50%) rotate(5deg); }
+}
+
+@keyframes lower-fin-swing2 {
+  0% { transform: translate(-50%, -50%) rotate(5deg); }
+  50% { transform: translate(-50%, -50%) rotate(-5deg); }
+  100% { transform: translate(-50%, -50%) rotate(5deg); }
+}
+
+
+/* Dory Animation */
+
+.fish2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20vw;
+  height: 20vh;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  animation: swim 10s linear infinite;
+  background-color: antiquewhite;
+}
+
+.fish2 img {
+  transform: scaleX(-1);
+}
+
+.fish2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fish2 .fish-tail {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 50%;
+  top: 50%;
+
+  animation: tail-swing 1s ease-in-out infinite;
+}
+
+.fish2 .fish-body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+}
+
