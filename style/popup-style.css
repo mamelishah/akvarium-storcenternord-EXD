@@ -1,0 +1,120 @@
+
+
+
+
+
+#info-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    width: 150px;
+    justify-content: center;
+}
+
+
+#info-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#info-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    
+
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+#info-popup.show .popup-content {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+.close-button:hover {
+    color: #000;
+}
+
+.popup-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#fish-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 10px;
+    border-right: 2px solid #eee;
+    padding-right: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.fish-icon {
+    width: 90%;
+    aspect-ratio: 1 / 1; /
+    object-fit: contain;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.fish-icon:hover {
+    transform: scale(1.1);
+}
+
+.fish-icon.active {
+    border-color: #0077be;
+    transform: scale(1.1);
+}
+
+#fish-details {
+    flex: 1;
+}
+
+#fish-details .placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+#fish-details h3 {
+    margin-top: 0;
+}

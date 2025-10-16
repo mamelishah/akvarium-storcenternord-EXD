@@ -1,98 +1,80 @@
 /* Sortbåndet kirug */
-
 .fish {
   position: absolute;
-  left: -15%;
+  left: 10%;
   top: 50%;
-  width: 20vw;
-  height: 20vh;
-  transform-origin: center center;
-  animation: swim 10s linear infinite;
+  transform: translateY(-50%) ;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.fish-inner {
+  position: relative;
+  display: inline-block;
+  max-width: 100px; 
+  width: auto;
+  height: auto;
 }
 
 .fish-body {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100px;
-  height: 100px;
-  transform: translate(-50%, -50%);
-}
-
-.fish img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;  
+  z-index: 10;
   transform: scaleX(-1);
 }
 
 .fish-tail {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  left: 31%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: tail-swing 1s ease-in-out infinite;
+  width: 30%;
+  height: auto;
+  left: -9%;
+  top: 57%;
+  transform: translateY(-50%) scaleX(-1);
+  animation: tail-swing-fisk1 1s ease-in-out infinite;
+  z-index: 1;
 }
 
-.fish img {
-  width: 100%;
+.big-fin {
+  position: absolute;
+  width: 15%;
   height: auto;
-  display: block;
-}
-
-.game1 img {
-  width: 100%;
-  height: auto;
-  display: block;
+  left: 50%;
+  top: 55%;
+  transform: translateX(-50%);
+    z-index: 3;
 }
 
 .long-lower-part-fin1 {
   position: absolute;
   width: 25px;
   height: 25px;
-  left: 43%;
-  bottom: 15%;
-  transform: translate(-50%, -50%);
+  left: 58%;
+  bottom: -26%;
+  transform: translateX(-50%);
   animation: lower-fin-swing 0.5s ease-in-out infinite;
+    z-index: 5;
 }
 
 .long-lower-part-fin2 {
   position: absolute;
   width: 25px;
   height: 25px;
-  left: 40%;
-  bottom: 15%;
-  transform: translate(-50%, -50%);
+  left: 47%;
+  bottom: -27%;
+  transform: translateX(-50%);
   animation: lower-fin-swing2 0.5s ease-in-out infinite;
+    z-index: 8;
 }
-
-
-.big-fin {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  left: 50%;
-  bottom: 45%;
-  transform: translate(-50%, -50%);
-  animation: lower-fin-swing2 0.5s ease-in-out infinite;
-}
-
-
-.top-part {
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  left: 46%;
-  bottom: 7%;
-  transform: translate(-50%, -50%)
-}
-
 
 .game1-container {
     position: absolute;
     width: 200px;
     height: 200px;
     left: 100px;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
    
     border: none;
@@ -117,28 +99,59 @@
     font-size: 2.2vh
 }
 
-@keyframes tail-swing {
-  0% { transform: translate(-50%, -50%) rotate(10deg); }
-  50% { transform: translate(-50%, -50%) rotate(-10deg); }
-  100% { transform: translate(-50%, -50%) rotate(10deg); }
-}
 
-@keyframes lower-fin-swing {
-  0% { transform: translate(-50%, -50%) rotate(5deg); }
-  50% { transform: translate(-50%, -50%) rotate(-5deg); }
-  100% { transform: translate(-50%, -50%) rotate(5deg); }
-}
-
-@keyframes lower-fin-swing2 {
-  0% { transform: translate(-50%, -50%) rotate(5deg); }
-  50% { transform: translate(-50%, -50%) rotate(-5deg); }
-  100% { transform: translate(-50%, -50%) rotate(5deg); }
-}
 
 
 /* Dory Animation */
 
 .fish2 {
+  position: absolute;
+  left: 70%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  animation: swim 10s linear infinite;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.fish2-inner {
+  position: relative; 
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.fish2-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fish2 .fish-tail {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: tail-swingDory 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+.fish2 .fish-body {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+
+}
+
+
+/* Anna's nemo fisk - animation */
+
+.Nemo {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -147,35 +160,208 @@
   transform: translate(-50%, -50%);
   transform-origin: center center;
   animation: swim 10s linear infinite;
-  background-color: antiquewhite;
+ 
 }
 
-.fish2 img {
+/* NEMO */
+.Nemo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  animation: swim 10s linear infinite;
+  width: fit-content;
+  height: fit-content;
+}
+
+.Nemo-inner {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.Nemo-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
   transform: scaleX(-1);
 }
 
-.fish2 img {
+.Nemo .bagfinne {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 50%;
+  top: 53%;
+  transform: translateX(-50%);
+  animation: tail-swingDory 1s ease-in-out infinite;
+  z-index: 1;
+}
+
+.Nemo .krop {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+}
+
+/* ORANGE FISH (fish3) */
+.fish3 {
+  position: absolute;
+  left: 80%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  animation: swim3 12s ease-in-out infinite alternate;
+  width: fit-content;
+  height: fit-content;
+}
+
+.fish3-inner {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.fish3-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scaleX(-1);
+}
+
+.fish3 .fish-tail {
+  position: absolute;
+  left: 70%;
+  top: 45%;
+  width: 48px;
+  height: 48px;
+  transform: translateX(-50%) translateY(-50%);
+  transform-origin: 90% 50%;
+  background-image: url('../images/OrangeFiskHale.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  animation: tail-swing3 0.8s ease-in-out infinite;
+}
+
+.fish3 .fish-body {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  z-index: 10;
+}
+
+.fish3 .long-lower-part-fin1,
+.fish3 .long-lower-part-fin2,
+.fish3 .big-fin {
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+/* GUL KIRURG (YELLOW FISH) */
+.yellow-fish {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  animation: swim 10s linear infinite;
+  width: fit-content;
+  height: fit-content;
+}
+
+.yellow-fish-inner {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.yellow-fish-inner img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.fish2 .fish-tail {
+.yellow-fish .fish-tail {
   position: absolute;
   width: 25px;
   height: 25px;
-  left: 50%;
+  left: -10%;
   top: 50%;
-
-  animation: tail-swing 1s ease-in-out infinite;
+  transform: translateX(-50%) translateY(-50%);
+  animation: tail-swing-yellow-fish 1s ease-in-out infinite;
+  z-index: 1;
 }
 
-.fish2 .fish-body {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+.yellow-fish .fish-body {
+  position: relative;
   width: 100px;
   height: 100px;
-  transform: translate(-50%, -50%);
+  z-index: 10;
 }
+
+.yellow-fish .fish-fin {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 48%;
+  bottom: 32%;
+  transform: translateX(-50%);
+  animation: lower-fin-swing 0.5s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes tail-swing3 {
+  0%   { transform: translate(-50%, -50%) scaleX(-1) rotate(-18deg); }
+  40%  { transform: translate(-50%, -50%) scaleX(-1) rotate(10deg); }
+  70%  { transform: translate(-50%, -50%) scaleX(-1) rotate(-8deg); }
+  100% { transform: translate(-50%, -50%) scaleX(-1) rotate(-18deg); }
+}
+
+@keyframes tail-swing {
+  0% { transform: translate(-50%, -50%) rotate(10deg); }
+  50% { transform: translate(-50%, -50%) rotate(-10deg); }
+  100% { transform: translate(-50%, -50%) rotate(10deg); }
+}
+
+@keyframes tail-swingDory {
+  0% { transform: translate(-50%, -50%) scaleX(-1) rotate(10deg); }
+  50% { transform: translate(-50%, -50%) scaleX(-1) rotate(-10deg); }
+  100% { transform: translate(-50%, -50%) scaleX(-1) rotate(10deg); }
+}
+
+
+@keyframes tail-swing-yellow-fish {
+    0% { transform: translate(-50%, -50%) scaleX(-1) rotate(10deg); }
+  50% { transform: translate(-50%, -50%) scaleX(-1) rotate(-10deg); }
+  100% { transform: translate(-50%, -50%) scaleX(-1) rotate(10deg); }
+}
+
+@keyframes lower-fin-swing {
+  0% { transform: translate(-50%, -50%) scaleX(-1) rotate(5deg); }
+  50% { transform: translate(-50%, -50%) scaleX(-1)  rotate(-5deg); }
+  100% { transform: translate(-50%, -50%) scaleX(-1)  rotate(5deg); }
+}
+
+@keyframes lower-fin-swing2 {
+  0% { transform: translate(-50%, -50%) scaleX(-1)  rotate(5deg); }
+  50% { transform: translate(-50%, -50%) scaleX(-1)  rotate(-5deg); }
+  100% { transform: translate(-50%, -50%) scaleX(-1)  rotate(5deg); }
+}
+
+
+@keyframes tail-swing-fisk1 {
+  0% { transform: translate(-50%, -50%) scaleX(-1) rotate(10deg); }
+  50% { transform: translate(-50%, -50%) scaleX(-1) rotate(-10deg); }
+  100% { transform: translate(-50%, -50%) scaleX(-1) rotate(10deg); }
+}
+
+
+
 

@@ -1,3 +1,4 @@
+/* Font */
 @font-face {
   font-family: 'MinFont'; 
   src: url('../assets/fonts/Super\ Kindly.ttf') format('truetype');
@@ -5,59 +6,188 @@
   font-style: normal;
 }
 
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  font-family: 'MinFont', sans-serif;
+body {
+  font-family: 'MinFont', Arial, sans-serif;
 }
-
 
 #bg {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    left: 0px;
-    top: 0px;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
 }
 
-
 #alge {
-    position: absolute;
-    height: 50vh;
-    width: 10vw;
-    left: 5vw;
-    bottom: 10vh;
+  position: absolute;
+  height: 50vh;
+  width: 10vw;
+  left: 5vw;
+  bottom: 10vh;
 }
 
 #alge2 {
-    position: absolute;
-    height: 30vh;
-    width: 10vw;
-    left: 15vw;
-    bottom: 7vh;
-    transform: scaleX(-1);
+  position: absolute;
+  height: 30vh;
+  width: 10vw;
+  left: 15vw;
+  bottom: 7vh;
+  transform: scaleX(-1);
 }
 
 #orange-coral {
-    position: absolute;
-    height: 20vh;
-    width: 10vw;
-    left: 25vw;
-    bottom: 2vh;
-    transform: scaleX(-1);
+  position: absolute;
+  height: 20vh;
+  width: 10vw;
+  left: 25vw;
+  bottom: 2vh;
+  transform: scaleX(-1);
 }
 
 #medium-coral {
-    position: absolute;
-    height: 40vh;
-    width: 38vw;
-    right: -5vw;
-    bottom: 2vh;
+  position: absolute;
+  height: 40vh;
+  width: 38vw;
+  right: -5vw;
+  bottom: 2vh;
 }
 
 
+.title-container {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 10px;
+}
+
+.title-container h1 {
+  font-family: 'MinFont', Arial, sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
 
 
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(70px, 1fr)); 
+  gap: 40px;           
+  max-width: 500px;      
+  margin: 0 auto;        
+  position: relative;
+  z-index: 10;
+}
+
+
+.card {
+  aspect-ratio: 0.8;
+  perspective: 1000px;
+  cursor: pointer;
+  width: 100%;          
+  max-width: 160px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  background: none;     
+  border: none;           
+  box-shadow: none;       
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card-back img {
+  width: 100%;          
+  height: auto;
+  max-height: 100%;        
+  border-radius: 0;     
+}
+
+.card-front {
+  background: white;
+  transform: rotateY(180deg);
+  padding: 5px;
+  border: 3px solid #667eea;
+}
+
+.card-front img {
+  width: 70%;
+  height: auto;
+  max-height: 60px;
+  margin-bottom: 5px;
+}
+
+.card-front p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #game-board {
+    grid-template-columns: repeat(2, minmax(50px, 1fr)); 
+    max-width: 200px;
+    gap: 30px;
+  }
+
+  .card-front img,
+  .card-back img {
+    max-height: 45px;
+  }
+
+  .title-container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+#back-button {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    height: 125px;
+    cursor: pointer;
+}
+
+#back-button img {
+    width: 100px;
+    height: 100px;
+}
+
+#back-button p {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+
+}

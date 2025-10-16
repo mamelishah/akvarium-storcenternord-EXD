@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/game1.css">
-    <link rel="stylesheet" href="./style/vendespil.css">
     <title>Document</title>
 </head>
 <body>
-    <main>
 
-            <img id="bg" src="./images/background-aq.png" alt="">
-            <img id="alge" src="./images/Alge.png" alt="">
-            <img id="alge2" src="./images/Alge.png" alt="">
-            <img id="alge2" src="./images/Alge.png" alt="">
-            <img id="orange-coral" src="./images/orange-coral-cartoon-free-png_1.png" alt="">
-            <img id="medium-coral" src="./images/medium-koral.png" alt="">
+    <audio id="button-click" src="./assets/sounds/button-click-sound.wav"></audio>
+    <audio id="drawing-card-sound" src="./assets/sounds/drawing-card.mp3"></audio>
+    <audio id="match-sound" src="./assets/sounds/card-match.mp3"></audio>
+    <audio id="no-match-sound" src="./assets/sounds/no-match-sound.mp3"></audio>
 
-            <div id="game-board" class="game-board"></div>
-    </main>
+   <main>
+    <img id="bg" src="./images/background-2-compressed.jpg" alt="">
+    <img id="alge" src="./images/bg-assets/Alge.png" alt="">
+    <img id="alge2" src="./images/bg-assets/Alge.png" alt="">
+    <img id="alge2" src="./images/bg-assets/Alge.png" alt="">
+    <img id="orange-coral" src="./images/bg-assets/orange-coral-cartoon-free-png_1.png" alt="">
+    <img id="medium-coral" src="./images/bg-assets/medium-koral.png" alt="">
+
+    <div class="title-container">
+        <h1>Vendespil</h1>
+    </div>
+
+    <div id="game-board" class="game-board"></div>
+
+    <div id="back-button">
+        <img src="./images/back-button.png" alt="">
+        <p>Tilbage</p>
+    </div>
+
+</main>
+
+
+
 
     <script src="./script/vendespil.js"></script>
+    <script src="./script/eventhandlers.js"></script>
 </body>
 </html>

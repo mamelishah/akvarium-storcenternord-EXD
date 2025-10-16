@@ -5,38 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/fish-style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/popup-style.css">
+
+    <title>Akvarium</title>
 </head>
 <body>
     
+    <audio id="button-click" src="./assets/sounds/button-click-sound.wav"></audio>
+    <audio id="drawing-card" src="./assets/sounds/drawing-card.mp3"></audio>
+    <audio id="match-sound" src="./assets/sounds/match-sound.mp3"></audio>
+    <audio id="no-match-sound" src="./assets/sounds/no-match-sound.mp3"></audio>
+
     <main id="main-section-container">
-    <img id="bg" src="./images/background-aq.jpg" alt="">
+    <img id="bg" src="./images/background-2-compressed.jpg" alt="">
 
-    <div class="fish">
-    <div class="big-fin"><img src="./images/acanthurus-polyzona/fin.png" alt=""></div>
-    <div class="fish-tail"><img src="./images/acanthurus-polyzona/tail.png" alt=""></div>
-    <div class="long-lower-part-fin1"><img src="./images/acanthurus-polyzona/long-lower-part.png" alt=""></div>
-    <div class="long-lower-part-fin2"><img src="./images/acanthurus-polyzona/small-part-lower.png" alt=""></div>
-    <div class="top-part"><img src="./images/acanthurus-polyzona/top-part.png" alt=""></div> 
-    <div class="fish-body"><img src="./images/acanthurus-polyzona/fish-body.png" alt=""></div>
-    </div>
+    <div id="title"><h1>Vælg et spil</h1></div>
 
+  <div class="fish">
+  <div class="fish-inner">
 
-    <div class="fish2">
-        <div class="fish-body"><img src="./images/dory/fish-body.png" alt=""></div>
-        <div class="fish-tail"><img src="./images/dory/fish-hale.png" alt=""></div>
-    </div>
+    <img class="fish-tail" src="./images/acanthurus-polyzona/tail.png" alt="Fish tail">
+    <img class="big-fin" src="./images/acanthurus-polyzona/fin.png" alt="">
 
-
-   <div onclick="window.location.href='vende-spil.html';" id="game1" class="game1-container">
-  <img src="./images/button-vendespil.png" alt="">
+    <img class="long-lower-part-fin1" src="./images/acanthurus-polyzona/long-lower-part.png" alt="">
+    <img class="long-lower-part-fin2" src="./images/acanthurus-polyzona/small-part-lower.png" alt="">
+    <img class="fish-body" src="./images/acanthurus-polyzona/fish-body.png" alt="Fish body">
+  </div>
 </div>
 
-    <img id="coral-bg" src="./images/coral.png" alt="">
-    <img id="medium-coral" src="./images/medium-koral.png" alt="">
+
+
+<div class="fish fish2">
+  <div class="fish2-inner">
+    <img class="fish-tail" src="./images/dory/fish-hale.png" alt="">
+    <img class="fish-body" src="./images/dory/fish-body.png" alt="">
+  </div>
+</div>
+
+<div class="Nemo fish">
+  <div class="Nemo-inner">
+    <img class="bagfinne" src="./images/nemo/bagfinne.png" alt="Nemo bagfinne">
+    <img class="krop" src="./images/nemo/NemoKrop.png" alt="Nemo krop">
+  </div>
+</div>
+
+<div class="fish3 fish">
+  <div class="fish3-inner">
+    <div class="fish-body"><img src="./images/orange-fish/orangefish-body.png" alt=""></div>
+    <div class="fish-tail"><img src="./images/orange-fish/orangefish-tail.png" alt=""></div>
+  </div>
+</div>
+
+<div class="yellow-fish fish">
+  <div class="yellow-fish-inner">
+    <div class="fish-body"><img src="./images/gul-kirug/gul-kirurg-fish-body.png" alt=""></div>
+    <div class="fish-tail"><img src="./images/gul-kirug/gul-kirurg-fish-hale.png" alt=""></div>
+    <div class="fish-fin"><img src="./images/gul-kirug/gul-kirurg-fish-finne.png" alt=""></div>
+  </div>
+</div>
+
+   <div id="game1" class="game1-container">
+  <img src="./images/button-vendespil.png" alt="">
+    </div>
+
+    <img id="coral-bg" src="./images/bg-assets/coral.png" alt="">
+    <img id="medium-coral" src="./images/bg-assets/medium-koral.png" alt="">
+
+    <div id="info-button">
+        <img src="./images/info-button.png" alt="">
+        <p>Info</p>
+    </div>
+
+
+    <div id="info-popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Vælg en fisk for at lære mere</h2>
+            <div class="popup-container">
+                <div id="fish-grid">
+                    </div>
+                <div id="fish-details">
+                    <p class="placeholder">Klik på en fisk til venstre!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </main>
 
-    <script src="./script/fish-motion.js"></script>
     <script src="./script/button-motion.js"></script>
+    <script src="./script/fish-motion.js"></script>
+    <script src="./script/popup.js"></script>
+    <script src="./script/eventhandlers.js"></script>
+
+
 </body>
 </html>
