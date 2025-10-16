@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { once: true });
       })
       .catch(err => {
-        console.error('play() fejlede:', err);
         window.location.href = "vende-spil.html";
       });
   });
@@ -31,10 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         clickSound.addEventListener('ended', () => {
           window.location.href = "index.html";
         }, { once: true });
-      })
-      .catch(err => {
-        console.error('play() fejlede:', err);
-        window.location.href = "index.html";
       });
   });
 });

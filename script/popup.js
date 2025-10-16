@@ -148,6 +148,7 @@ infoPopup.addEventListener('click', (event) => {
 
 fishGrid.addEventListener('click', (event) => {
     if (event.target.classList.contains('fish-icon')) {
+        document.getElementById('button-click').play();
         const fishKey = event.target.dataset.fishKey;
         showFishInfo(fishKey);
     }
